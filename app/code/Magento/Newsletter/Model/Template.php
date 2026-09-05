@@ -16,8 +16,6 @@ use Magento\Framework\Validator\IntUtils;
  * @method \Magento\Newsletter\Model\Template setTemplateCode(string $value)
  * @method \Magento\Newsletter\Model\Template setTemplateText(string $value)
  * @method \Magento\Newsletter\Model\Template setTemplateTextPreprocessed(string $value)
- * @method string getTemplateStyles()
- * @method \Magento\Newsletter\Model\Template setTemplateStyles(string $value)
  * @method int getTemplateType()
  * @method \Magento\Newsletter\Model\Template setTemplateType(int $value)
  * @method string getTemplateSubject()

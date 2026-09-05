@@ -14,8 +14,6 @@ use Magento\Store\Model\StoreManagerInterface;
  * @method \Magento\Email\Model\Template setTemplateCode(string $value)
  * @method string getTemplateText()
  * @method \Magento\Email\Model\Template setTemplateText(string $value)
- * @method string getTemplateStyles()
- * @method \Magento\Email\Model\Template setTemplateStyles(string $value)
  * @method int getTemplateType()
  * @method \Magento\Email\Model\Template setTemplateType(int $value)
  * @method string getTemplateSubject()

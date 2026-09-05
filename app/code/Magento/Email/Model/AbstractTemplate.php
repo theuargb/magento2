@@ -220,6 +220,31 @@ abstract class AbstractTemplate extends AbstractModel implements TemplateTypesIn
     }
 
     /**
+     * Set template styles.
+     *
+     * @param string|null $styles
+     * @return $this
+     */
+    public function setTemplateStyles(?string $styles): self
+    {
+        return $this->setData('template_styles', $styles);
+    }
+
+    /**
+     * Get template styles.
+     *
+     * Template styles are exposed to the template variable resolver and must
+     * remain scalar data.
+     *
+     * @return string|null
+     */
+    public function getTemplateStyles(): ?string
+    {
+        return $this->getData('template_styles');
+    }
+
+
+    /**
      * Get contents of the included template for template directive
      *
      * @param string $configPath

@@ -173,6 +173,29 @@ class AbstractTemplateTest extends TestCase
         return $mock;
     }
 
+    public function testTemplateStylesAcceptScalarData(): void
+    {
+        $model = $this->getModelMock();
+
+        $this->assertSame($model, $model->setTemplateStyles('p { color: #000; }'));
+        $this->assertSame('p { color: #000; }', $model->getTemplateStyles());
+
+        $this->assertSame($model, $model->setTemplateStyles(null));
+        $this->assertNull($model->getTemplateStyles());
+    }
+
+    public function testTemplateStylesRejectStructuredData(): void
+    {
+        $model = $this->getModelMock();
+
+        $this->expectException(\TypeError::class);
+        $model->setTemplateStyles([
+            'generatorClass' => 'UnexpectedClass',
+            'with_resolved' => ['instance' => 'unexpected'],
+        ]);
+    }
+
+
     /**
      * @param        $variables array
      * @param        $templateType string
